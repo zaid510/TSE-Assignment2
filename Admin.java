@@ -1,3 +1,10 @@
+/*
+ * Admin class represents an administrator in the course registration system.
+ * It extends the User class and implements the AdminInterface and Serializable interfaces.
+ * Admin class provides functionality for creating, deleting, and editing courses,
+ * registering students, displaying course information, and performing other administrative tasks.
+ */
+
 package crs;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +33,7 @@ public class Admin extends User implements AdminInterface, java.io.Serializable 
 	
 	//Instantiate course object from default constructor
 	
-	//WORKS
+	// Function for creating courses
 	public static String createCourses() throws IOException {
 		
 		Scanner input = new Scanner(System.in);
@@ -58,7 +65,7 @@ public class Admin extends User implements AdminInterface, java.io.Serializable 
 		return "Course added.";
 	}
 	
-	//WORKS
+	// Function for deleting a course
 	public static void deleteCourse() {
 		Course course = new Course();
 		//Ask user for courseID
@@ -75,7 +82,7 @@ public class Admin extends User implements AdminInterface, java.io.Serializable 
 		}
 	}
 	
-	//WORKS
+	// Function for editing a course
 	public static void editCourse() throws IOException {
 		Course course = new Course();
 		Scanner input = new Scanner(System.in);
