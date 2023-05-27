@@ -1,3 +1,10 @@
+/*
+ * This class represents a Student in the course registration system.
+ * It extends the User class and implements the StudentInterface and Serializable interfaces.
+ * It provides methods for viewing courses, registering for courses, withdrawing from courses,
+ * and viewing the list of registered courses for a student.
+ */
+
 package crs;
 
 import java.io.IOException;
@@ -80,7 +87,7 @@ public class Student extends User implements StudentInterface, java.io.Serializa
 	
 	//Student methods
 	
-	//WORKS
+	// This function allows the student to view all available courses.
 	public static void viewAllCourses() {
 
 			System.out.println(crsMain.courseArrayList);
@@ -89,6 +96,7 @@ public class Student extends User implements StudentInterface, java.io.Serializa
 
 	//WORKS
 	public static String fullCourseID = null;
+	// This function allows the student to view the courses that are not full (still have available spots).
 	public static void viewNotFullCourses() throws IOException {
 		//In ArrayList of courses, if Max# == enrolled# return course info
 		Course course = new Course();
