@@ -1,5 +1,11 @@
-package crs;
+/**
+ * The Course class represents a course in the education system.
+ * It contains information about the course, such as the name, ID, maximum number of students,
+ * enrolled students, instructor, section, location, and the list of students enrolled in the course.
+ * The class provides methods to add and remove students, as well as access and modify the course details.
+ */
 
+package crs;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -40,7 +46,8 @@ public class Course implements Serializable {
 		this.courseLocation = courseLocation;
 		
 	}
-
+        
+	// This function retrieves the course ID.
 	public  String getCourseID() {
 		return courseID;
 	}
@@ -53,6 +60,7 @@ public class Course implements Serializable {
 		return maxStudents;
 	}
 
+	// This function sets the maximum number of students for the course.
 	public  void setMaxStudents(int maxStudents) {
 		this.maxStudents = maxStudents;
 	}
@@ -114,6 +122,8 @@ public class Course implements Serializable {
 	public void removeStudentCourses(String courseID) {
 		this.studentCourses.remove(courseID);
 	}
+	
+	// This function adds a student to the course and increments the count of enrolled students.
 	public void addStudent (String name) {
 		this.students.add(name);
 		this.enrolledStudents +=1;
